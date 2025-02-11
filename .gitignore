@@ -1,0 +1,8 @@
+Makefile
+.idea
+tmp
+
+tests
+
+
+app.env
