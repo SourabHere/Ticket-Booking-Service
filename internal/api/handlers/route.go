@@ -1,7 +1,6 @@
 package handlers
 
 import (
-	"fmt"
 	"net/http"
 	"time"
 
@@ -52,8 +51,6 @@ func (h *RouteHandler) SearchRoutes(c *fiber.Ctx) error {
 	}
 
 	var validate = validator.New()
-
-	fmt.Println(req)
 
 	if err := validate.Struct(&req); err != nil {
 		return c.Status(http.StatusBadRequest).JSON(fiber.Map{"error": err.Error()})
